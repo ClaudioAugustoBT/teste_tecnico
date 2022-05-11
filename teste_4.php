@@ -33,8 +33,6 @@ function tem_repeticao($arr)
         }
     }
 
-    // echo $repete_1 . " / " . $repete_mais . " - ";
-
     $status = false;
     if ($repete_1 == 0 && $repete_mais == 0) {
         $status = false;
@@ -67,43 +65,6 @@ function retira_elementos($arr)
     }
 
     return $status;
-}
-
-function verifica_sequancia($arr)
-{
-    $status = 0;
-
-    if (esta_ordenado($arr)) {
-
-        // echo "Ordenado |>>| ";
-
-        if (tem_repeticao($arr)) {
-            // echo "Tem Num. repetido |>>| ";
-
-            $status = 1;
-        } else {
-            // echo "Não Tem Num. repetido |>>| ";
-            $status = 0;
-        }
-    } else {
-        // echo "Desordenado |>>| ";
-        if (tem_repeticao($arr)) {
-            // echo "Tem Num. repetido |>>| ";
-
-            $status = 1;
-        } else {
-            // echo "Não Tem Num. repetido |>>| ";
-            if (retira_elementos($arr)) {
-                // echo "TRUE";
-            } else {
-                // echo "FALSE";
-            }
-        }
-    }
-
-
-
-    // echo " || Status:" . $status."<<<::::>>>";
 }
 
 function SequenciaCrescente($arr)
